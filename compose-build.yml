@@ -13,7 +13,9 @@ services:
       - appnet
 
   php:
-    image: atmaluhur/php74-oci8:latest
+    build: 
+      context: ./php
+      dockerfile: Dockerfile
     container_name: php74
     volumes:
       - ./app:/var/www/html
